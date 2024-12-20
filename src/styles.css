@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* App Container */
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .header {
+    margin-top: 20px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .advice-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    animation: slideUp 0.5s ease-in-out;
+  }
+  
+  .advice-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    min-height: 60px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .advice-text.loading {
+    color: #ffdd57;
+  }
+  
+  .advice-button {
+    background: #ffdd57;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .advice-button:hover {
+    background: #ffd700;
+    transform: translateY(-3px);
+  }
+  
+  .advice-button:disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  /* Counter */
+  .counter {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 20px;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2rem;
+    }
+  
+    .advice-text {
+      font-size: 1.2rem;
+    }
+  
+    .advice-button {
+      font-size: 1rem;
+      padding: 8px 15px;
+    }
+  
+    .counter {
+      font-size: 1rem;
+    }
+  }
+  
