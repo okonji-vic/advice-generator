@@ -6,6 +6,14 @@ export default function App() {
   const [count, setCount] = React.useState(0);
   const [loading, setLoading] = React.useState(false);
 
+  // let message = "";
+
+  // if (count > 0) {
+  //   document.title = `Advice Generator (${count})`;
+  //   const noun = count === 1 ? "piece" : "pieces";
+  //   message = `You've received ${count} ${noun} of advice!`;
+  // }
+
   async function getAdvice() {
     setLoading(true);
     try {
@@ -34,7 +42,9 @@ export default function App() {
             {loading ? "Loading..." : "Get Advice"}
           </button>
         </div>
-        {count > 0 && <p className="counter">You've received {count} pieces of advice!</p>}
+        {/* {count > 0 && <p className="counter">{message}</p>} */}
+        {count == 1 && <p className="counter">you have received {count} piece of advice!</p>}
+        {count > 1 && <p className="counter">you have received {count} pieces of advice!</p>}
       </main>
       <footer className="footer">
         <p>Created with ❤️ by Okonji Emeka</p>
